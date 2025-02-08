@@ -2,6 +2,7 @@ import React from 'react';
 
 function Header() {
   return (
+    //edit make sure it works
     <header className="header">
       <img className="logo" src="/images/maru logo.png" alt="restaurant logo"/>
       <p className="slogan">Authentic flavors, fresh ingredients, a taste of Japan awaits!</p>
