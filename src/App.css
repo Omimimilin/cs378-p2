@@ -1,0 +1,74 @@
+/* 
+  Style your elements by creating CSS classes here.
+  Below, you can see an example of a class called "menu" that changes the color of the text to blue. Modify according to your needs.
+*/
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.slogan {
+  text-align: center;
+  font-family: homemade apple;
+  font-style: italic;
+  font-size: 30px;
+  color:rgb(100, 7, 0);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slogan2 {
+  text-align: center;
+  font-family: garamond;
+  font-size: 30px;
+  margin-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foodpic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:125px;
+  height:125px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.foodTitle {
+  font-weight: 700;
+  font-size: large;
+  font-family: Garamond;
+  color: rgb(100, 7, 0);
+
+}
+
+.foodDescription {
+  color: gray;
+  font-family: Times New Roman;
+}
+.foodPrice {
+  color:black;
+  font-family: Times New Roman;
+}
+
+.add-button {
+  margin-left: 130px;
+  display:inline-block;
+  font-family: Times New Roman;
+  font-size: 15px;
+  border-style: none;
+  border-radius: 30px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  width: 55px;
+  background-color: rgb(100, 7, 0);
+  color:white;
+}
