@@ -1,26 +1,40 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// This is a functional component that represents a single menu item. It currently takes in the title and displays it in an h2 element.
-// Modify the component to take in all the other properties of a menu item you need and display them in the component.
-// Use bootstrap to style the elements so that it looks like the mockup in the assignment.
-// Hint: You can use the image name to get the image from the images folder.
-const MenuItem = ({ item }) => {
+
+// MenuItem component to display each menu item and quantity controls
+const MenuItem = ({ item, quantity, onQuantityChange }) => {
     const { title, description, imageName, price } = item;
+
+    // Increment quantity
+    const handleIncrement = () => {
+        onQuantityChange(item.id, quantity + 1);
+    };
+
+    // Decrement quantity, ensuring it doesn't go below 0
+    const handleDecrement = () => {
+        if (quantity > 0) {
+            onQuantityChange(item.id, quantity - 1);
+        }
+    };
+
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container mb-4">
+            <div className="row justify-content-center">
                 <div className="col-4">
-                    <img className="foodpic" src={`${process.env.PUBLIC_URL}/images/${imageName}`} alt={title} />
+                    <img className="foodpic img-fluid" src={`${process.env.PUBLIC_URL}/images/${imageName}`} alt={title} />
                 </div>
                 <div className="col-8">
-                    <div className="foodTitle"> {title}</div>
-                    <div className="foodDescription"> {description}</div>
+                    <div className="foodTitle h4">{title}</div>
+                    <div className="foodDescription">{description}</div>
                     <div className="foodPrice">
                         <div>
-                            {price}
-                            <button className="add-button"> add </button>
+                            <span className="h5">${price.toFixed(2)}</span>
+                            <div className="quantity-controls mt-2">
+                                <button className="btn btn-outline-secondary me-2" onClick={handleDecrement}>-</button>
+                                <span className="quantity">{quantity}</span>
+                                <button className="btn btn-outline-secondary ms-2" onClick={handleIncrement}>+</button>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
