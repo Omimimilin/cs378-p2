@@ -10,7 +10,7 @@ const MenuItem = ({ item }) => {
         <div className="container">
             <div className="row">
                 <div className="col-4">
-                    <img className="foodpic" src={`./images/${imageName}`} alt={title} />
+                    <img className="foodpic" src={`${process.env.PUBLIC_URL}/images/${imageName}`} alt={title} />
                 </div>
                 <div className="col-8">
                     <div className="foodTitle"> {title}</div>
